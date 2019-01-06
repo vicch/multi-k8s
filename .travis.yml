@@ -22,15 +22,15 @@ after_success:
   - docker push vicch/multi-server
   - docker push vicch/multi-worker
 
-deploy:
-  on:
-    branch: master
-  provider: elasticbeanstalk
-  region: us-east-1
-  app: multi-docker
-  env: MultiDocker-env
-  bucket_name: elasticbeanstalk-us-east-1-607854156336
-  bucket_path: docker-multi
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: $AWS_SECRET_ACCESS_KEY
+# deploy:
+#   on:
+#     branch: master
+#   provider: elasticbeanstalk
+#   region: us-east-1
+#   app: multi-docker
+#   env: MultiDocker-env
+#   bucket_name: elasticbeanstalk-us-east-1-607854156336
+#   bucket_path: docker-multi
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key:
+#     secure: $AWS_SECRET_ACCESS_KEY

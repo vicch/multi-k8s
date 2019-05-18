@@ -4,9 +4,8 @@ metadata:
   name: letsencrypt-prod
 spec:
   acme:
-    server:
-      server: https://acme-v02.api.letsencrypt.org/directory
-      email: vicch7@gmail.com
-      privateKeySecretRef:
-        name: letsencrypt-prod
-      http01: {}
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: vicch7@gmail.com
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    http01: {}

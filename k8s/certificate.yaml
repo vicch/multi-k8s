@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: victorchen-dev-tls
+spec:
+  secretName: victorchen-dev-tls-secret
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: victorchen.dev
+  dnsNames:
+    - victorchen.dev
+    - www.victorchen.dev
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - victorchen.dev
+          - www.victorchen.dev
